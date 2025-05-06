@@ -189,8 +189,13 @@ author_profile: true
         toggleBtns.forEach(btn => {
             btn.addEventListener('click', function () {
                 const content = this.nextElementSibling;
-                content.style.display = content.style.display === 'none' ? 'block' : 'none';
-                this.classList.toggle('collapsed');
+                const isContentVisible = content.style.display === 'block';
+                content.style.display = isContentVisible ? 'none' : 'block';
+                if (isContentVisible) {
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.remove('collapsed');
+                }
             });
         });
     </script>
