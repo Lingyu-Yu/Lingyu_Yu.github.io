@@ -1,19 +1,149 @@
 ---
 layout: archive
 permalink: /year-archive/
-title: "Blog posts"
+title: "杂项"
 author_profile: true
-redirect_from:
-  - /wordpress/blog-posts/
 ---
 
+
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 给不同级别的标题添加不同形状的标号 */
+        h2::before {
+            content: '■ ';
+            color: #3B82F6;
+        }
+
+        h3::before {
+            content: '◆ ';
+            color: #60A5FA;
+        }
+
+        h4::before {
+            content: '● ';
+            color: #93C5FD;
+        }
+
+        /* 折叠功能样式 */
+       .toggle-content {
+            display: none;
+        }
+
+       .toggle-btn {
+            cursor: pointer;
+        }
+
+       .toggle-btn::after {
+            content: ' ▼';
+        }
+
+       .toggle-btn.collapsed::after {
+            content: ' →';
+        }
+
+        /* 设置各级标题的字体大小 */
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+
+    </style></head>
+<body class="bg-gray-100 text-gray-800 font-sans light-mode">
+    <div class="container mx-auto p-8">
+
+        <h2 class="toggle-btn">专题研讨与杂谈</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>注意：这不属于“未来义务教育”的组成部分。</p>
+            <h3 class="toggle-btn">初等数学中的高等数学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>当前适用人群:对《初中数学》《高中数学》《高中物理》感兴趣（满足一项即可），有过深入思考，并希望通过直观的方式，从中抽离概括出更高的思想观点。</p>
+                <p>
+                    <a href="https://www.bilibili.com/video/BV1xWPkewEPw/" class="text-blue-600 hover:underline">【MaExpo】从切线和切面理解交叉学科思维</a>、
+                    <a href="https://www.bilibili.com/video/BV1S9LFzgEGR/" class="text-blue-600 hover:underline">【三部曲】1.折射定律&加权将军饮马：纯几何法vs物理方法</a>
+                </p>
+            </div>
+            <h3 class="toggle-btn">趣味问题杂谈</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>当前适用人群:接触过一些知识，希望从一些小的切入点出发思考一些有趣的问题，并拓展知识面。</p>
+                <p>
+                    <a href="https://www.bilibili.com/video/BV1mQ4y1x7oH/" class="text-blue-600 hover:underline">曲面面积定义的讨论</a>、
+                    <a href="https://www.bilibili.com/video/BV1ez9bY7Eof/" class="text-blue-600 hover:underline">可数与离散究竟是怎样的关系？拓扑学已给出答案！</a>、
+                    <a href="https://www.bilibili.com/video/BV1Wy411z7at/" class="text-blue-600 hover:underline">极化电磁波及其分解合成的简明原理</a>、
+                    <a href="https://www.bilibili.com/video/BV1z3xnejEUE/" class="text-blue-600 hover:underline">边缘分布是高斯分布的非高斯分布</a>、
+                    <a href="https://www.bilibili.com/video/BV1Yi421S77d/" class="text-blue-600 hover:underline">通过电磁场与电磁波和电磁学教材的一处问题理解卷积</a>、
+                    <a href="https://www.bilibili.com/video/BV12KRhYrEFP/" class="text-blue-600 hover:underline">AI会觉醒自我意识吗？</a>、
+                    <a href="https://www.bilibili.com/video/BV1s223YPEQq/" class="text-blue-600 hover:underline">数学的“先唱戏后搭台”4（关于平面几何、同一法/巧合点）</a>
+                </p>
+            </div>
+            <h3 class="toggle-btn">生活中的知识与科技</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>当前适用人群:略微具有一点中学数理常识，或者学过电子信息科技的一些课程，想了解这些理论在生活中的应用或体现。</p>
+                <p>
+                    <a href="https://www.bilibili.com/video/BV1dZ421v7i1/" class="text-blue-600 hover:underline">环太平洋解读（抗干扰电路信号系统：模拟vs数字）（太极：无招胜有招）</a>
+                </p>
+            </div>
+        </div>
+        <h2 class="toggle-btn">旧版内容汇总</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>
+                <a href="https://www.bilibili.com/video/BV1ekpdewERs/" class="text-blue-600 hover:underline">【数字系统】三小时速通数字逻辑电路设计与计算机体系结构</a>、
+                <a href="https://www.bilibili.com/video/BV1CN411t7f5/" class="text-blue-600 hover:underline">【信号与系统】小波变换最全入门导论_从傅里叶变换的工程缺陷谈起，到各种实用信号分解方法</a>、
+                <a href="https://www.bilibili.com/video/BV1uC4y1v7Gt/" class="text-blue-600 hover:underline">【大物】大物期末复习_磁学+电磁波+量子</a>、
+                <a href="https://www.bilibili.com/video/BV11xQRYNEVt/" class="text-blue-600 hover:underline">【通信原理】这个信号这么头尖尖的？匹配滤波（理论）的四重境界</a>、
+                <a href="https://www.bilibili.com/video/BV11j411b7vv/" class="text-blue-600 hover:underline">【信号与系统】卷积——最全串讲</a>、
+                <a href="https://www.bilibili.com/video/BV1659pYgEEk/" class="text-blue-600 hover:underline">【通信原理】角度调制</a>、
+                <a href="https://www.bilibili.com/video/BV1GG411r7rd/" class="text-blue-600 hover:underline">【通信原理】An Introduction to Modulation （全面预习简单速通向）</a>、
+                <a href="https://www.bilibili.com/video/BV1oM4m1d7K3/" class="text-blue-600 hover:underline">【数字系统】一小时速通数字逻辑电路（动画直观理解本质）</a>、
+                <a href="https://www.bilibili.com/video/BV1VH4y1o7R3/" class="text-blue-600 hover:underline">【电路分析】简单理解阻抗匹配：电分-动态电路-小专题</a>、
+                <a href="https://www.bilibili.com/video/BV1uN4y1o7xL/" class="text-blue-600 hover:underline">【微积分】班门弄斧(勿喷)：微积分入门带学</a>、
+                <a href="https://www.bilibili.com/video/BV1wr421F7Yj/" class="text-blue-600 hover:underline">【计网】一天速成计网b站视频观看路径良心推荐（抱佛脚应试+理解）</a>
+            </p>
+        </div>
+
+    </div>
+    <script>
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            const content = btn.nextElementSibling;
+            if (content.style.display === 'block') {
+                btn.classList.remove('collapsed');
+            } else {
+                btn.classList.add('collapsed');
+            }
+        });
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const isContentVisible = content.style.display === 'block';
+                content.style.display = isContentVisible ? 'none' : 'block';
+                if (isContentVisible) {
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.remove('collapsed');
+                }
+            });
+        });
+    </script></body>
+</html>
+
