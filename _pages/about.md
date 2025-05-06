@@ -1,49 +1,237 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "余-凌宇的网课主页"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+“课程要减少，分量要减轻，减少门类，为的是全面发展。”
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+“应当大力发展中等教育和高等教育，争取在十五年左右的时间内，基本上做到使全国青年和成年，凡是有条件的和自愿的，都可以受到高等教育。”
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over - just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+“以上所说，已经不是什么新鲜意见、创造发明，多年以来，很多人已经是这样做了，不过还没有普及。”
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this template](https://github.com/academicpages/academicpages.github.io) by clicking the "Use this template" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+1.1.课程视频观看地址：
+-----
+[bilibili个人主页](https://space.bilibili.com/443207424?spm_id_from=333.1007.0.0)、
+[知乎个人主页](https://www.zhihu.com/people/19-77-68-41)、
+[小红书个人主页](https://www.xiaohongshu.com/user/profile/5f4ba1b8000000000100187f)、
 
-Site-wide configuration
+1.2.学习顺序参考
 ------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+学科之间彼此交织，但目前很多已完成的工作都是课程内的单点打通，还没有全部打通的能力，整体主页规划中必然有很多不合理之处，未来可能会大规模调整。如图所示，以下仅是一种参考的学习顺序，仅包含部分内容，建议结合自身情况灵活安排。
 
-Create content & metadata
+2.2.数学基础课
 ------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+### 2.2.1.初等数学基础
+#### 数与式
+计划中
+#### 初等几何
+##### 全等与相似
+待制作
+##### 圆
+待制作
+##### 立体几何
+待制作
+##### 反演、调和点列、极点极线
+待制作
+##### 三角形的性质
+待制作
 
-**Markdown generator**
+### 2.2.2.线性代数
+#### 线性代数
+计划中
+#### 数值线性代数
+计划中
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+### 2.2.3.微积分与方程
+#### 微积分
+计划中（下文有旧版链接）
+#### 复变函数
+##### 第一阶段
+[导数与微分：直观理解柯西黎曼条件](https://www.bilibili.com/video/BV1PgSnYhEh7/)、
+[积分：直观理解柯西定理&柯西公式&留数定理](https://www.bilibili.com/video/BV179iXY5Exy/)、
+[级数：直观理解泰勒展式和洛朗展式](https://www.bilibili.com/video/BV1g36qYaE1x/)、
+[留数：直观理解零点&极点&留数&奇点](https://www.bilibili.com/video/BV1jpfYYVE4Q/)、
+##### 第二阶段
+[直观透彻理解柯西古萨定理&柯西积分公式](https://www.bilibili.com/video/BV1YRdLY2EN8/)、
+(后续待制作)
+##### 第三阶段
+计划中
+#### 实变函数
+计划中
+#### 泛函分析与微分流形
+学习中
+#### 傅里叶分析与微分方程
+学习中
+#### 动力系统
+待学习
+#### 数值分析
+待学习
 
-How to edit your site's GitHub repository
+### 2.2.4.随机数学
+#### 概率论
+计划中
+#### 数理统计
+计划中
+#### 随机过程
+计划中
+#### 经典信息论
+学习中
+
+### 2.2.5.几何与拓扑
+学习中
+
+### 2.2.6.代数
+学习中
+
+### 2.2.7.算法与组合数学
+学习中
+
+2.3.物理学基础课
 ------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+### 2.3.1.经典力学
+#### 牛顿力学
+计划中
+#### 早期电磁学
+计划中（下文有旧版链接）
+#### 热力学
+待学习
+#### 分析力学
+学习中
+#### 流体力学
+待学习
+### 2.3.2.统计力学
+#### 分子动理论
+计划中
+### 2.3.3.波
+#### 振动学
+计划中
+#### 量子力学基础
+计划中（下文有旧版链接）
+#### 电动力学
+计划中
+#### 波动光学
+待学习
+### 2.3.4.几何物理
+#### 狭义相对论
+计划中
+#### 广义相对论
+待学习
+#### 量子场论
+待学习
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
+2.4.化学基础课
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+待学习
+
+2.5.生物学基础课
+------
+待学习
+
+2.6.信息科技基础课
+------
+### 2.6.1.数字系统
+#### 数字电路原理
+计划中（下文有旧版链接）
+#### 计算机体系结构与嵌入式处理器
+学习中（下文有旧版链接）
+#### 计算机通信与网络
+学习中（下文有旧版链接）
+#### 计算机操作系统
+待学习
+#### 计算机数据库
+待学习
+
+### 2.6.2.固体与半导体基础
+待学习
+
+### 2.6.4.信号与系统
+#### 线性时不变系统
+计划中（下文有旧版链接）
+#### 电路分析
+计划中（下文有旧版链接）
+#### 数字信号处理
+计划中
+#### 自动控制原理
+计划中
+#### 阵列信号处理
+计划中
+#### 时频分析
+学习中（下文有旧版链接）
+#### 稀疏恢复
+学习中
+
+### 2.6.5.电子信息系统基础
+#### 无线电系统与通信原理
+计划中（下文有旧版链接）
+#### 射频模拟电路原理
+待学习
+#### 微波与天线原理
+待学习
+#### 基于信息论的编码理论
+学习中
+#### 现代通信与雷达理论
+学习中
+
+### 2.6.6.人工智能基础
+#### 知识工程
+计划中
+#### 统计学习
+学习中
+#### 深度外监督学习
+计划中
+#### 深度自监督学习
+学习中
+#### 现代人工智能理论
+待学习
+
+### 2.6.7.软硬件开发实战经验
+能力尚待提升
+
+2.1.意识形态基础课（含见证）
+------
+学习中
+
+3.1.专题研讨与杂谈：
+-----
+注意：这不属于“未来义务教育”的组成部分。
+
+#### 初等数学中的高等数学
+当前适用人群:对《初中数学》《高中熟悉》《高中物理》感兴趣（满足一项即可），有过深入思考，并希望通过直观的方式，从中抽离概括出更高的思想观点。
+
+[【MaExpo】从切线和切面理解交叉学科思维](https://www.bilibili.com/video/BV1xWPkewEPw/)、
+[【三部曲】1.折射定律&加权将军饮马：纯几何法vs物理方法](https://www.bilibili.com/video/BV1S9LFzgEGR/)、
+
+#### 趣味问题杂谈
+当前适用人群:接触过一些知识，希望从一些小的切入点出发思考一些有趣的问题，并拓展知识面。
+
+[曲面面积定义的讨论](https://www.bilibili.com/video/BV1mQ4y1x7oH/)、
+[可数与离散究竟是怎样的关系？拓扑学已给出答案！](https://www.bilibili.com/video/BV1ez9bY7Eof/)、
+[极化电磁波及其分解合成的简明原理](https://www.bilibili.com/video/BV1Wy411z7at/)、
+[边缘分布是高斯分布的非高斯分布](https://www.bilibili.com/video/BV1z3xnejEUE/)、
+[通过电磁场与电磁波和电磁学教材的一处问题理解卷积](https://www.bilibili.com/video/BV1Yi421S77d/)、
+[AI会觉醒自我意识吗？](https://www.bilibili.com/video/BV12KRhYrEFP/)、
+[数学的“先唱戏后搭台”4（关于平面几何、同一法/巧合点）](https://www.bilibili.com/video/BV1s223YPEQq/)、
+
+#### 生活中的知识与科技
+当前适用人群:略微具有一点中学数理常识，或者学过电子信息科技的一些课程，想了解这些理论在生活中的应用或体现。
+
+[环太平洋解读（抗干扰电路信号系统：模拟vs数字）（太极：无招胜有招）](https://www.bilibili.com/video/BV1dZ421v7i1/)、
+
+
+3.2.旧版内容汇总
+-----
+[【数字系统】三小时速通数字逻辑电路设计与计算机体系结构](https://www.bilibili.com/video/BV1ekpdewERs/)、
+[【信号与系统】小波变换最全入门导论_从傅里叶变换的工程缺陷谈起，到各种实用信号分解方法](https://www.bilibili.com/video/BV1CN411t7f5/)、
+[【大物】大物期末复习_磁学+电磁波+量子](https://www.bilibili.com/video/BV1uC4y1v7Gt/)、
+[【通信原理】这个信号这么头尖尖的？匹配滤波（理论）的四重境界](https://www.bilibili.com/video/BV11xQRYNEVt/)、
+[【信号与系统】卷积——最全串讲](https://www.bilibili.com/video/BV11j411b7vv/)、
+[【通信原理】角度调制](https://www.bilibili.com/video/BV1659pYgEEk/)、
+[【通信原理】An Introduction to Modulation （全面预习简单速通向）](https://www.bilibili.com/video/BV1GG411r7rd/)
+[【数字系统】一小时速通数字逻辑电路（动画直观理解本质）](https://www.bilibili.com/video/BV1oM4m1d7K3/)
+[【电路分析】简单理解阻抗匹配：电分-动态电路-小专题](https://www.bilibili.com/video/BV1VH4y1o7R3/)
+[【微积分】班门弄斧(勿喷)：微积分入门带学](https://www.bilibili.com/video/BV1uN4y1o7xL/)
+[【计网】一天速成计网b站视频观看路径良心推荐（抱佛脚应试+理解）](https://www.bilibili.com/video/BV1wr421F7Yj/)
