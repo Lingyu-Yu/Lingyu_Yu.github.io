@@ -179,6 +179,14 @@ author_profile: true
     <script>
         const toggleBtns = document.querySelectorAll('.toggle-btn');
         toggleBtns.forEach(btn => {
+            const content = btn.nextElementSibling;
+            if (content.style.display === 'block') {
+                btn.classList.remove('collapsed');
+            } else {
+                btn.classList.add('collapsed');
+            }
+        });
+        toggleBtns.forEach(btn => {
             btn.addEventListener('click', function () {
                 const content = this.nextElementSibling;
                 content.style.display = content.style.display === 'none' ? 'block' : 'none';
