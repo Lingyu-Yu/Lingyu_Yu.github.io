@@ -67,23 +67,11 @@ author_profile: true
             font-size: 1rem;
         }
 
-        /* 白天模式样式 */
-        body.light-mode {
-            background-color: #f3f4f6;
-            color: #1f2937;
-        }
-
-        /* 夜间模式样式 */
-        body.dark-mode {
-            background-color: #1f2937;
-            color: #f3f4f6;
-        }
     </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans light-mode">
     <div class="container mx-auto p-8">
-<!--         <h1 class="font-bold mb-4">基础课</h1> -->
         <h2 class="toggle-btn">初等数学基础</h2>
         <div class="toggle-content">
             <h3 class="toggle-btn">数与式</h3>
@@ -107,15 +95,15 @@ author_profile: true
             </div>
         </div>
         <h2 class="toggle-btn">微积分与方程</h2>
-        <div class="toggle-content">
+        <div class="toggle-content" style="display: block;">
             <h3 class="toggle-btn">微积分</h3>
             <div class="toggle-content">
                 <p>计划中（下文有旧版链接）</p>
             </div>
             <h3 class="toggle-btn">复变函数</h3>
-            <div class="toggle-content">
+            <div class="toggle-content" style="display: block;">
                 <h4 class="toggle-btn">第一阶段</h4>
-                <div class="toggle-content">
+                <div class="toggle-content" style="display: block;">
                     <p>
                         <a href="https://www.bilibili.com/video/BV1PgSnYhEh7/" class="text-blue-600 hover:underline">导数与微分：直观理解柯西黎曼条件</a>、
                         <a href="https://www.bilibili.com/video/BV179iXY5Exy/" class="text-blue-600 hover:underline">积分：直观理解柯西定理&柯西公式&留数定理</a>、
@@ -197,17 +185,6 @@ author_profile: true
                 this.classList.toggle('collapsed');
             });
         });
-
-        // 监听来自上级网页的消息
-        // window.addEventListener('message', function (event) {
-        //     if (event.data === 'light-mode') {
-        //         document.body.classList.remove('dark-mode');
-        //         document.body.classList.add('light-mode');
-        //     } else if (event.data === 'dark-mode') {
-        //         document.body.classList.remove('light-mode');
-        //         document.body.classList.add('dark-mode');
-        //     }
-        // });
     </script>
 </body>
 
