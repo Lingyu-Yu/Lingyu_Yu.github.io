@@ -8,11 +8,10 @@ author_profile: true
 <!DOCTYPE html>
 <html lang="en">
 
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--     <title>数学基础课</title> -->
+    <title>数学课</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <style>
@@ -33,44 +32,56 @@ author_profile: true
         }
 
         /* 折叠功能样式 */
-        .toggle-content {
+       .toggle-content {
             display: none;
         }
 
-        .toggle-btn {
+       .toggle-btn {
             cursor: pointer;
         }
 
-        .toggle-btn::after {
+       .toggle-btn::after {
             content: ' ▼';
         }
 
-        .toggle-btn.collapsed::after {
+       .toggle-btn.collapsed::after {
             content: ' →';
         }
 
         /* 设置各级标题的字体大小 */
         h1 {
-            font-size: 2.25rem; /* 36px */
+            font-size: 2.25rem;
         }
 
         h2 {
-            font-size: 1.5rem; /* 24px */
+            font-size: 1.5rem;
         }
 
         h3 {
-            font-size: 1.25rem; /* 20px */
+            font-size: 1.25rem;
         }
 
         h4 {
-            font-size: 1rem; /* 16px */
+            font-size: 1rem;
+        }
+
+        /* 白天模式样式 */
+        body.light-mode {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+
+        /* 夜间模式样式 */
+        body.dark-mode {
+            background-color: #1f2937;
+            color: #f3f4f6;
         }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-800 font-sans light-mode">
     <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold mb-4">数学基础课</h1>
+        <h1 class="font-bold mb-4">数学基础课</h1>
         <h2 class="toggle-btn">初等数学基础</h2>
         <div class="toggle-content">
             <h3 class="toggle-btn">数与式</h3>
@@ -165,14 +176,14 @@ author_profile: true
         <h2 class="toggle-btn">几何与拓扑</h2>
         <div class="toggle-content">
             <p>学习中</p>
-            <h4 class="toggle-btn">2.2.6.代数</h4>
-            <div class="toggle-content">
-                <p>学习中</p>
-            </div>
-            <h4 class="toggle-btn">2.2.7.算法与组合数学</h4>
-            <div class="toggle-content">
-                <p>学习中</p>
-            </div>
+        </div>
+        <h2 class="toggle-btn">代数</h2>
+        <div class="toggle-content">
+            <p>学习中</p>
+        </div>
+        <h2 class="toggle-btn">算法与组合数学</h2>
+        <div class="toggle-content">
+            <p>学习中</p>
         </div>
     </div>
     <script>
@@ -184,8 +195,20 @@ author_profile: true
                 this.classList.toggle('collapsed');
             });
         });
+
+        // 监听来自上级网页的消息
+        window.addEventListener('message', function (event) {
+            if (event.data === 'light-mode') {
+                document.body.classList.remove('dark-mode');
+                document.body.classList.add('light-mode');
+            } else if (event.data === 'dark-mode') {
+                document.body.classList.remove('light-mode');
+                document.body.classList.add('dark-mode');
+            }
+        });
     </script>
 </body>
 
 </html>
+    
     
