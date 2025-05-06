@@ -7,8 +7,112 @@ author_profile: true
 
 {% include base_path %}
 
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 给不同级别的标题添加不同形状的标号 */
+        h2::before {
+            content: '■ ';
+            color: #3B82F6;
+        }
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+        h3::before {
+            content: '◆ ';
+            color: #60A5FA;
+        }
+
+        h4::before {
+            content: '● ';
+            color: #93C5FD;
+        }
+
+        /* 折叠功能样式 */
+       .toggle-content {
+            display: none;
+        }
+
+       .toggle-btn {
+            cursor: pointer;
+        }
+
+       .toggle-btn::after {
+            content: ' ▼';
+        }
+
+       .toggle-btn.collapsed::after {
+            content: ' →';
+        }
+
+        /* 设置各级标题的字体大小 */
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+
+    </style></head>
+<body class="bg-gray-100 text-gray-800 font-sans light-mode">
+    <div class="container mx-auto p-8">
+
+        <!-- 第三份内容 -->
+        <h2 class="toggle-btn">化学基础课</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>待学习</p>
+        </div>
+        <h2 class="toggle-btn">生物学基础课</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>待学习</p>
+        </div>
+        <h2 class="toggle-btn">地理学基础课</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>待学习</p>
+        </div>
+        <h2 class="toggle-btn">意识形态基础课（含见证）</h2>
+        <div class="toggle-content" style="display: block;">
+            <p>学习中</p>
+        </div>
+
+    </div>
+    <script>
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            const content = btn.nextElementSibling;
+            if (content.style.display === 'block') {
+                btn.classList.remove('collapsed');
+            } else {
+                btn.classList.add('collapsed');
+            }
+        });
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const isContentVisible = content.style.display === 'block';
+                content.style.display = isContentVisible ? 'none' : 'block';
+                if (isContentVisible) {
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.remove('collapsed');
+                }
+            });
+        });
+    </script></body>
+</html>
+
 
