@@ -14,14 +14,14 @@ main:
   - title: "物理基础课"
     url: /talks/    
 
-  - title: "其他基础课"
+  - title: "信息科技课"
     url: /teaching/    
     
-  - title: "信息科技课"
+  - title: "其他基础课"
     url: /portfolio/
         
-  # - title: "Blog Posts"
-  #   url: /year-archive/
+  - title: "杂项"
+    url: /year-archive/
     
   - title: "学术简历"
     url: /cv/
