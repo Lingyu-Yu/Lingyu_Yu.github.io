@@ -1,16 +1,164 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "物理基础课"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 给不同级别的标题添加不同形状的标号 */
+        h2::before {
+            content: '■ ';
+            color: #3B82F6;
+        }
 
-{% endif %}
+        h3::before {
+            content: '◆ ';
+            color: #60A5FA;
+        }
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+        h4::before {
+            content: '● ';
+            color: #93C5FD;
+        }
+
+        /* 折叠功能样式 */
+       .toggle-content {
+            display: none;
+        }
+
+       .toggle-btn {
+            cursor: pointer;
+        }
+
+       .toggle-btn::after {
+            content: ' ▼';
+        }
+
+       .toggle-btn.collapsed::after {
+            content: ' →';
+        }
+
+        /* 设置各级标题的字体大小 */
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+
+    </style></head>
+<body class="bg-gray-100 text-gray-800 font-sans light-mode">
+    <div class="container mx-auto p-8">
+
+        <h2 class="toggle-btn">经典力学</h2>
+        <div class="toggle-content" style="display: block;">
+            <h3 class="toggle-btn">牛顿力学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中</p>
+            </div>
+            <h3 class="toggle-btn">早期电磁学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中（下文有旧版链接）</p>
+            </div>
+            <h3 class="toggle-btn">热力学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>待学习</p>
+            </div>
+            <h3 class="toggle-btn">分析力学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>学习中</p>
+            </div>
+            <h3 class="toggle-btn">流体力学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>待学习</p>
+            </div>
+        </div>
+        <h2 class="toggle-btn">统计力学</h2>
+        <div class="toggle-content" style="display: block;">
+            <h3 class="toggle-btn">分子动理论</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中</p>
+            </div>
+        </div>
+        <h2 class="toggle-btn">波</h2>
+        <div class="toggle-content" style="display: block;">
+            <h3 class="toggle-btn">振动学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中</p>
+            </div>
+            <h3 class="toggle-btn">量子力学基础</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中（下文有旧版链接）</p>
+            </div>
+            <h3 class="toggle-btn">电动力学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中</p>
+            </div>
+            <h3 class="toggle-btn">波动光学</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>待学习</p>
+            </div>
+        </div>
+        <h2 class="toggle-btn">几何物理</h2>
+        <div class="toggle-content" style="display: block;">
+            <h3 class="toggle-btn">狭义相对论</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>计划中</p>
+            </div>
+            <h3 class="toggle-btn">广义相对论</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>待学习</p>
+            </div>
+            <h3 class="toggle-btn">量子场论</h3>
+            <div class="toggle-content" style="display: block;">
+                <p>待学习</p>
+            </div>
+        </div>
+      
+    </div>
+    <script>
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        toggleBtns.forEach(btn => {
+            const content = btn.nextElementSibling;
+            if (content.style.display === 'block') {
+                btn.classList.remove('collapsed');
+            } else {
+                btn.classList.add('collapsed');
+            }
+        });
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                const isContentVisible = content.style.display === 'block';
+                content.style.display = isContentVisible ? 'none' : 'block';
+                if (isContentVisible) {
+                    this.classList.add('collapsed');
+                } else {
+                    this.classList.remove('collapsed');
+                }
+            });
+        });
+    </script></body>
+</html>
+
